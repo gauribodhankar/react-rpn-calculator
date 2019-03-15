@@ -1,0 +1,94 @@
+.rpn-calculator-app-main {
+    .rpn-calculator-component {
+        position: relative;
+        min-height: 275px;
+        width: 500px;
+        background-color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-direction: column;
+        border-radius: 5px;
+
+        .input-output-container {
+            .calculator-display {
+                margin: 10px;
+                overflow: auto;
+
+                .input-output-display {
+                    float: right;
+                    text-align: right;
+                    width: 473px;
+                    min-height: 30px;
+                    padding-right: 5px;
+                    font-size: 24px;
+                    margin: 5px;
+                    border: 1px solid lightgray;
+                    background-color: white;
+                }
+            }
+        }
+        .keypad-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 0 0 10px 0;
+
+            button {
+                height: 40px;
+                width: 60px;
+                float: left;
+                margin: 5px;
+                border: 1px solid gray;
+                border-radius: 3px;
+                text-align: center;
+                font-size: 18px;
+                color: white;
+            }
+            button:enabled {
+                cursor: pointer;
+            }
+            .btn-number {
+                background: dimgray;
+            }
+            .btn-basic-oper {
+                background: orange;
+            }
+            .btn-adv-oper {
+                background: cadetblue;
+            }
+            .btn-enter {
+                background: green;
+            }
+            .btn-cancel {
+                background: brown;
+            }
+            .btn-long {
+                width: 130px;
+            }
+            .key-set {
+                overflow-y: auto;
+                width: 210px;
+            }
+            .operator-key-set {
+                width: 70px;
+            }
+        }
+    }
+    .hidden {
+        display: none;
+    }
+    .error-boundary-container {
+        display: flex;
+        justify-content: center;
+    }
+    .error-msg {
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: red;
+    }
+    .error-container {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+    }
+}
